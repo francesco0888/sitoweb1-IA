@@ -1,0 +1,197 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* Sfondo completamente bianco */
+    color: #000000; /* Testo generale nero */
+}
+
+/* Header */
+header {
+    background-color: #000000; /* Sfondo nero */
+    color: #ffffff; /* Testo bianco per contrasto */
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #cc0000; /* Dettaglio rosso sportivo */
+}
+
+/* Navigazione con Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #000000; /* Sfondo nero */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #cc0000; /* Linea di separazione rossa */
+}
+
+nav a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase; /* Aggiunge un tocco più tecnico/sportivo */
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #cc0000; /* L'hover diventa rosso (dettaglio) */
+}
+
+.nav-page {
+    background-color: #cc0000; /* Pulsante pagina esterna in rosso */
+    color: #ffffff;
+}
+
+/* Main e Sezioni */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+    /* Ho mantenuto una leggerissima ombra per non far sembrare la pagina piatta sul bianco */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+section h2 {
+    color: #000000; /* Titoli in nero */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #cc0000; /* Sottolineatura rossa (dettaglio) */
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Contenitore Cards con Flexbox (Desktop) */
+.cards-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #000000; /* Bordo nero per definire la card sul fondo bianco */
+    border-left: 6px solid #cc0000; /* Bordo laterale rosso marcato */
+}
+
+.card h3 {
+    color: #cc0000; /* Titolo della card rosso */
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Sfondo nero */
+    color: #ffffff; /* Testo bianco */
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 4px solid #cc0000; /* Dettaglio rosso superiore */
+}
+
+/* STRUTTURA SLIDESHOW */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 3px solid #000000; /* Cornice nera attorno alle foto */
+}
+
+.slide {
+    display: none; 
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Banda nera semitrasparente */
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-top: 2px solid #cc0000; /* Filetto rosso sopra il testo */
+}
+
+/* Pulsanti Avanti/Indietro */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.6); /* Sfondo nero */
+    border: none;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: #cc0000; /* Diventano rossi al passaggio del mouse */
+}
+
+/* Animazione di dissolvenza */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* MEDIA QUERY PER MOBILE E TABLET (Responsive) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Stile per le immagini all'interno delle schede/cards */
+.card-img {
+    width: 100%;          /* Prende tutta la larghezza della card */
+    height: 180px;        /* Fissa un'altezza uguale per tutte così le card rimangono simmetriche */
+    object-fit: cover;    /* Ritaglia l'immagine proporzionalmente senza distorcerla o schiacciarla */
+    border-radius: 4px;   /* Smussa leggermente gli angoli per estetica */
+    margin-bottom: 15px;  /* Lascia spazio tra l'immagine e il testo sottostante */
+    border: 1px solid #000000; /* Un sottile bordo nero sportivo */
+}

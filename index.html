@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondo a 2 Ruote - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Introduzione al Mondo delle 2 Ruote</h1>
+    </header>
+
+    <nav>
+        <a href="#intro">Introduzione</a>
+        <a href="#categorie">Categorie</a>
+        <a href="#sicurezza">Sicurezza</a>
+        <a href="guida.html" class="nav-page">Guida alle Patenti</a>
+    </nav>
+
+    <main>
+        <section id="intro">
+			<h2>Passione su due ruote</h2>
+			<p>Benvenuto nel sito dedicato a chi vuole scoprire la libertà e l'emozione delle due ruote. Dai primi scooter ai grandi viaggi in moto.</p>
+		
+			<div class="slideshow-container">
+				<div class="slide fade">
+					<img src="images/intro.jpg" alt="Scooter in città">
+					<div class="slide-text">Passione per le 2 ruote</div>
+				</div>
+				<div class="slide fade">
+					<img src="images/intro2.jpg" alt="Moto da strada">
+					<div class="slide-text">Raduni tra appassionati</div>
+				</div>
+				<div class="slide fade">
+					<img src="images/intro3.jpg" alt="Viaggio in moto">
+					<div class="slide-text">L'avventura incomincia...</div>
+				</div>
+
+				<button class="prev" onclick="cambiaSlide(-1)">&#10094;</button>
+				<button class="next" onclick="cambiaSlide(1)">&#10095;</button>
+			</div>
+		</section>
+
+        <section id="categorie">
+            <h2>Le Principali Categorie</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Scooter</h3>
+                    <p>Perfetti per la città, automatici, consumi ridotti e massima praticità quotidiana.</p>
+                </div>
+                <div class="card">
+                    <h3>Naked</h3>
+                    <p>Moto essenziali, senza carenature, agili e divertenti per i passi di montagna.</p>
+                </div>
+                <div class="card">
+                    <h3>Sportive</h3>
+                    <p>Pura tecnologia e aerodinamica derivate dalle competizioni in pista.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sicurezza">
+            <h2>La Sicurezza Prima di Tutto</h2>
+            <p>Andare su due ruote richiede responsabilità. L'abbigliamento tecnico non è un optional: casco integrale, giacca con protezioni, guanti e paraschiena salvano la vita.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; questo sito è un progetto didattico</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
